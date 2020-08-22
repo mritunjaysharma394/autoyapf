@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/autoyapf@v1
         with:
-          args: --recursive --in-place --aggressive --aggressive .
+          args: --style pep8  .
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
