@@ -7,8 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/autoyapf@v1
-      - name: autoyapf
-        uses: ./
         with:
           args: --recursive --in-place --aggressive --aggressive .
       - name: Create Pull Request
