@@ -1,8 +1,12 @@
 name: Formatting python code
-on: [push, pull_request]
+on:
+  push:
     paths:
-    - '**.py'
-    types: [autoyapf-example-command]
+      - '**.py'
+  pull_request:
+    paths:
+      - '**.py'
+types: [autoyapf-example-command]
 jobs:
   autoyapf:
     runs-on: ubuntu-latest
