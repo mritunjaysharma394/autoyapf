@@ -1,23 +1,28 @@
 name: Formatting python code
 on:
-  repository_dispatch:
+  [push, pull]
+    paths:
+    - '**.py'
     types: [autoyapf-example-command]
 jobs:
-  autopep8:
+  autoyapf:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/autoyapf@v1
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Use local my-action
+        uses: ./.github/actions/autoyapf
         with:
           args: --style pep8  .
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          commit-message: autopep8 action fixes
-          title: Fixes by autopep8 action
-          body: This is an auto-generated PR with fixes by autopep8.
-          labels: autopep8, automated pr
+          commit-message: autoyapf action fixes
+          title: Fixes by autoyapf action
+          body: This is an auto-generated PR with fixes by autoyapf.
+          labels: autoyapf, automated pr
           reviewers: mritunjaysharma394
-          branch: autopep8-patches
+          branch: autoyapf-patches
       - name: Add reaction
         uses: peter-evans/create-or-update-comment@v1
         with:
