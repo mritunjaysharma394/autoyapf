@@ -22,7 +22,7 @@ jobs:
           title: Fixes by autoyapf action
           body: This is an auto-generated PR with fixes by autoyapf.
           labels: autoyapf, automated pr
-          reviewers: peter-evans
+          reviewers: mritunjaysharma394
           branch: autoyapf-patches
       - name: Add reaction
         uses: peter-evans/create-or-update-comment@v1
