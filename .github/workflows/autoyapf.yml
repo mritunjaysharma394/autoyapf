@@ -15,7 +15,7 @@ jobs:
         uses: mritunjaysharma394/autoyapf@v1.0.2-beta
         with:
           args: --style pep8 --recursive --in-place .
-        - name: Create Pull Request
+      - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
           commit-message: autoyapf action fixes
