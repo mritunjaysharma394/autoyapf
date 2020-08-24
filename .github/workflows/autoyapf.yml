@@ -13,4 +13,4 @@ jobs:
       - name: Use autoyapf
         uses: mritunjaysharma394/autoyapf@v1.0.2-beta
         with:
-          args: --style pep8 --recursive --recursive .
+          args: --style pep8 --recursive --in-place --aggressive --aggressive  .
