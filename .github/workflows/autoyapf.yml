@@ -17,6 +17,7 @@ jobs:
           args: --style pep8 --recursive --in-place .
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
+        id: pr
         with:
           commit-message: autoyapf action fixes
           title: Fixes by autoyapf action
@@ -27,6 +28,5 @@ jobs:
       - name: Add reaction
         uses: peter-evans/create-or-update-comment@v1
         with:
-          repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
-          comment-id: ${{ github.event.comment.id }}
+          comment-id: ${{ steps.pr.outputs.comment.id }}
           reaction-type: hooray
