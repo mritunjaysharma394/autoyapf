@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Use autoyapf
-        uses: mritunjaysharma394/autoyapf@v1.0.1
+        uses: mritunjaysharma394/autoyapf@v1.0.2
         with:
           args: --style pep8  .
       - name: Create Pull Request
