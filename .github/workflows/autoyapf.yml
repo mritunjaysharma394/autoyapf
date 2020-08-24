@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Use autoyapf
-        uses: mritunjaysharma394/autoyapf@v1.0.2
+        uses: mritunjaysharma394/autoyapf@v1.0.2-beta
         with:
           args: --style pep8  .
