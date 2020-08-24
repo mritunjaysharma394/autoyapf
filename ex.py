@@ -20,9 +20,7 @@ def example1():
 
 
 def example2():
-    return {
-        'has_key() is deprecated': True
-    }.has_key({'f': 2}.has_key(''))
+    return {'has_key() is deprecated': True}.has_key({'f': 2}.has_key(''))
 
 
 class Example3(object):
