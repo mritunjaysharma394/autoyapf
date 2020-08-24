@@ -14,18 +14,3 @@ jobs:
         uses: mritunjaysharma394/autoyapf@v1.0.2
         with:
           args: --style pep8  .
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        with:
-          commit-message: autoyapf action fixes
-          title: Fixes by autoyapf action
-          body: This is an auto-generated PR with fixes by autoyapf.
-          labels: autoyapf, automated pr
-          reviewers: mritunjaysharma394
-          branch: autoyapf-patches
-      - name: Add reaction
-        uses: peter-evans/create-or-update-comment@v1
-        with:
-          repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
-          comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
-          reaction-type: hooray

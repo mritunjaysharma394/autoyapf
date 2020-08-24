@@ -1,5 +1,5 @@
 #!/bin/sh -l
 set -uo pipefail
 
-autoyapf $*
+yapf $*
 echo ::set-output name=exit-code::$?
