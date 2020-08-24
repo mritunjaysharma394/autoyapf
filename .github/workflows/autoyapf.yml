@@ -1,6 +1,5 @@
 name: Formatting python code
-on:
-  [push, pull]
+on: [push, pull]
     paths:
     - '**.py'
     types: [autoyapf-example-command]
