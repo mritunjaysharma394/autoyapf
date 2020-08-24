@@ -1,6 +1,6 @@
 FROM python:3.8.3-alpine3.10
 
-LABEL maintainer="Mritunjay Sharma" <mritunjaysharma394@Qgmail.com>
+LABEL maintainer="Mritunjay Sharma <mritunjaysharma394@gmail.com>"
 LABEL repository="https://github.com/mritunjaysharma394/autoyapf"
 LABEL homepage="https://github.com/mritunjaysharma394/autoyapf"
 
