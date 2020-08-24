@@ -9,7 +9,6 @@ LABEL com.github.actions.description="Automating Python formatting using yapf"
 LABEL com.github.actions.icon="code"
 LABEL com.github.actions.color="blue"
 
-COPY LICENSE README.md /
 
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
