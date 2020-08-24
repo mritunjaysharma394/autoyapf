@@ -10,8 +10,8 @@ jobs:
   autoyapf:
     runs-on: ubuntu-latest
     steps:
-      - name: Use autoyapf
-        uses: actions/autoyapf@v1
+      - name: Use local my-action
+        uses: ./.github/actions/autoyapf
         with:
           args: --style pep8  .
       - name: Create Pull Request
