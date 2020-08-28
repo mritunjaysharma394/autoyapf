@@ -1,10 +1,10 @@
 name: Formatting python code
-on: pull_request
+on: pull_request_target
 jobs:
   autoyapf:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1.0.2-beta
+      - uses: actions/checkout@master
         with:
           ref: ${{ github.head_ref }}
       - name: autoyapf
