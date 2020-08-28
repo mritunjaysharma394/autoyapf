@@ -4,7 +4,7 @@ jobs:
   autoyapf:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/mritunjaysharma394/autoyapf@v1.0.2-beta
         with:
           ref: ${{ github.head_ref }}
       - name: autoyapf
