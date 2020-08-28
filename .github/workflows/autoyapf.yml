@@ -25,8 +25,3 @@ jobs:
           labels: autoyapf, automated pr
           reviewers: mritunjaysharma394
           branch: autoyapf-patches
-      - name: Add reaction
-        uses: peter-evans/create-or-update-comment@v1
-        with:
-          comment-id: ${{ steps.pr.outputs.comment.id }}
-          reaction-type: hooray
