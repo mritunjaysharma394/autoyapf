@@ -8,7 +8,7 @@ jobs:
         with:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           ref: ${{ github.head_ref }}
-      - name: Use autoyapf
+      - name: autoyapf
         id: autoyapf
         uses: mritunjaysharma394/autoyapf@v1.0.2-beta
         with:
