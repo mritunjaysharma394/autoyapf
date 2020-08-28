@@ -13,7 +13,7 @@ jobs:
         uses: mritunjaysharma394/autoyapf@v1.0.2-beta
         with:
           args: --style pep8 --recursive --in-place .
-     - name: Commit autoyapf changes
+      - name: Commit autoyapf changes
         if: steps.autoyapf.outputs.exit-code == 2
         run: |
           git config --global user.name 'Mritunjay Sharma'
