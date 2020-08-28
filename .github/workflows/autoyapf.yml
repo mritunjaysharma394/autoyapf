@@ -1,24 +1,22 @@
 name: Formatting python code
-on:
-  push:
-    paths:
-      - '**.py'
+on: pull_request
 jobs:
   autoyapf:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+        with:
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          ref: ${{ github.head_ref }}
       - name: Use autoyapf
+        id: autoyapf
         uses: mritunjaysharma394/autoyapf@v1.0.2-beta
         with:
           args: --style pep8 --recursive --in-place .
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        id: pr
-        with:
-          commit-message: autoyapf action fixes
-          title: Fixes by autoyapf action
-          body: This is an auto-generated PR with fixes by autoyapf.
-          labels: autoyapf, automated pr
-          reviewers: mritunjaysharma394
-          branch: autoyapf-patches
+     - name: Commit autoyapf changes
+        if: steps.autoyapf.outputs.exit-code == 2
+        run: |
+          git config --global user.name 'Mritunjay Sharma'
+          git config --global user.email 'mritunjaysharma394@users.noreply.github.com'
+          git commit -am "Automated autoyapf fixes"
+          git push
