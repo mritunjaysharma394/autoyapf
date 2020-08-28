@@ -14,7 +14,6 @@ jobs:
         with:
           args: --style pep8 --recursive --in-place .
       - name: Commit autoyapf changes
-        if: steps.autoyapf.outputs.exit-code == 2
         run: |
           git config --global user.name 'Mritunjay Sharma'
           git config --global user.email 'mritunjaysharma394@users.noreply.github.com'
