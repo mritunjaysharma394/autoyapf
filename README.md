@@ -53,6 +53,8 @@ jobs:
 accordingly in `git config --global user.name 'Maintainer Name'` and `git config --global user.email 'github_user_name_of_maintainer@users.noreply.github.com'` respectively
 in the above `.yml` file
 
+
+## Working example
 This configuration will work something like this. As an example here, my friend Naman is contributing to the Project with a Pull Request of a code that is not formatted or styled. On
 merging this PR, `autoyapf` action will be triggered which will automatically style the code according to PEP-8 Guidelines.:
 
