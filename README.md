@@ -13,7 +13,7 @@ or not as **autoyapf** action will take care of that :confetti_ball:
 
 ## Usage
 ### Step 1:
-Create a `.github/workflows` directory in your repository and inside this directory create a workflow `.yml` file. An [example workflow](#example-workflow---create-a-release) is available below. For more information, reference the GitHub Help Documentation for [Creating a workflow file](https://help.github.com/en/articles/configuring-a-workflow#creating-a-workflow-file).
+Create a `.github/workflows` directory in your repository and inside this directory create a workflow `.yml` file (give the file a name like `autoyapf.yml`). An example workflow is available below. For more information, reference the GitHub Help Documentation for [Creating a workflow file](https://help.github.com/en/articles/configuring-a-workflow#creating-a-workflow-file).
 
 ### Step 2: 
 Copy the workflow example below in the `.yml` file you created in `.github/workflows` directory.
