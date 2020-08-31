@@ -25,7 +25,10 @@ The following workflow is a simple example to demonstrate how the action works.
 
 ```yaml
 name: Formatting python code
-on: push
+on:
+  push:
+    paths:
+    - '**.py'
 jobs:
   autoyapf:
     runs-on: ubuntu-latest
