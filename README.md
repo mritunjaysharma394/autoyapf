@@ -9,7 +9,7 @@ Worried whether your Python code is following the style  guidelines or not? Well
 **autoyapf** is a GitHub action for [yapf](https://github.com/google/yapf), an open-source tool that automatically formats Python code to conform to the PEP 8 style guide. 
 It is in essence, the algorithm that takes the code and reformats it to the best formatting that conforms to the style guide, even if the original code didn't violate the style guide.
 
-This action is designed to be used in conjunction with the 'push' trigger. In simple words - everytime **the maintainer pushes the code from thier own playground or merges a Pull Request from a contributor it will be 
+This action is designed to be used in conjunction with the 'push' trigger. In simple words - everytime **the maintainer pushes the code from their own playground or merges a Pull Request from a contributor it will be 
 formatted automatically with the PEP 8 Style guidelines** using the *yapf* tool. This action is a win-win situation for **both contributors and maintainers** of projects involving Python! Yes, you heard it right! 
 
 This action will immensely help in increasing the speed of development cycle of projects as you will no longer need to worry about whether clean code is being produced 
@@ -78,9 +78,6 @@ merging this PR, `autoyapf` action will be triggered which will automatically st
 
 **4. Visible changes in code after the autoyapf fix**
 ![Visible changes in code after the autoyapf fix](https://github.com/mritunjaysharma394/autoyapf/blob/master/assets/Visible_changes_in_code.png)
-
-Note that due to [token restrictions on public repository forks](https://docs.github.com/en/actions/configuring-and-managing-workflows/authenticating-with-the-github_token#permissions-for-the-github_token), this workflow does not work for pull requests raised from forks.
-Private repositories can be configured to [enable workflows](https://docs.github.com/en/github/administering-a-repository/disabling-or-limiting-github-actions-for-a-repository#enabling-workflows-for-private-repository-forks) from forks to run without restriction. 
 
 ## Contributing
 We would love you to contribute to `@actions/autoyapf`, pull requests are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
