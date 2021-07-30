@@ -47,19 +47,14 @@ jobs:
       - name: Push changes
         if: steps.git-check.outputs.modified == 'true'
         run: |
-          git config --global user.name 'Maintainer Name' 
-          git config --global user.email 'github_user_name_of_maintainer@users.noreply.github.com' 
+          git config --global user.name 'github-actions' 
+          git config --global user.email 'github-actions@github.com' 
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git commit -am "Automated autoyapf fixes"
           git push
 ```
 
-**Note**:  
-1. `GITHUB_TOKEN` is provided by Actions, you do not need to create your own token.
-2. If you are the Project Maintainer/Developer and you want to use this action in your project, please change the 'Maintainer Name' and 'github_user_name_of_maintainer'
-accordingly in `git config --global user.name 'Maintainer Name'` and `git config --global user.email 'github_user_name_of_maintainer@users.noreply.github.com'` respectively
-in the above `.yml` file
-
+**Note**: The `GITHUB_TOKEN` is provided by Actions; you do not need to create your own token.
 
 ## Working example
 This configuration will work something like this. As an example here, my friend Naman is contributing to the Project with a Pull Request of a code that is not formatted or styled. On
